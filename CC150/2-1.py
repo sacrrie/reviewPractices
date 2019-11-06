@@ -2,8 +2,9 @@
 # Write Code to remove duplicates from an unsorted linked list.
 
 
-#FOLLOW UP
+# FOLLOW UP
 # How would you solve this problem if a temporary buffer is not allowed?
+# 指针操作非常绕，多加小心，注意Python里object的互相拷贝是不带reference的指针拷贝
 
 class Node:
     def __init__(self,data=None):
@@ -43,7 +44,7 @@ class sLinkedList:
                     previous.next=n.next
                 else:
                     temp.append(n.data)
-                    previous=n
+                    previous=n #这里拷贝的是静态指针，下一循环n改变但是previous不改变
                 n=n.next
         else:
             while(n is not None):
