@@ -1,0 +1,22 @@
+True
+Empty Stack!
+Empty Stack!
+3
+1
+[None, None, 1]
+--------------
+True
+Empty Stack!
+Empty Stack!
+3
+1
+[1, None, None, 1]
+--------------
+True
+Empty Stack!
+Empty Stack!
+2
+3
+2
+1
+[1, None, 1, None, 1]
