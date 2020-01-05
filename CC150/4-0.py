@@ -49,3 +49,15 @@ class graph_node:
     def __init__(self,msg):
         self.msg=msg
         self.neighbor=[]
+
+#DFS
+#todo: refactir the DFS below using a qieue or
+#other python method that is compatible with simple
+#implementation above
+def DFS(root):
+    if roit is not None:
+        visit(root)
+        root.visited=true
+        for i in root.neighbor:
+            if not i.visited:
+                DFS(i)
