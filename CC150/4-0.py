@@ -61,3 +61,21 @@ def DFS(root):
         for i in root.neighbor:
             if not i.visited:
                 DFS(i)
+                
+#Depth first search, need further test
+def BFS(root):
+    if root is not None:
+        q=queue()
+        visit(root)
+        root.visited=true
+        for i in root.neighbor:
+            if not i.visited:
+                q.append(i)
+        while len(q) != 0 :
+            j=q.pop()
+            if j is not None:
+                visit(j)
+            for i in root.neighbor:
+                if not i.visited:
+                    q.append(i)
+        
