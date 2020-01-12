@@ -1,5 +1,6 @@
 #bit manipulation practice file
 #a simple bit manipulation function
+'''
 import bitstring
 print(int('111001', 2))
 
@@ -19,3 +20,13 @@ def repeated_logical_right_shift(base,time):
     return(answer)
 b=repeated_logical_right_shift(5,1)
 print(b.int)
+'''
+
+def get_bit(num, index):
+    left=num
+    right=1 << index
+    #code below won't work , the right most 1 would disappear
+    #right=1 >> index
+    return((left & right) != 0)
+
+print(get_bit(4,2))
