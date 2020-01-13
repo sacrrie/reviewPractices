@@ -30,3 +30,10 @@ def get_bit(num, index):
     return((left & right) != 0)
 
 print(get_bit(4,2))
+
+def set_bit(num,index):
+    left=num
+    right=1 << index
+    return(left | right)
+
+print(set_bit(4,1))
