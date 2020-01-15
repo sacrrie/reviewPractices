@@ -20,7 +20,6 @@ def repeated_logical_right_shift(base,time):
     return(answer)
 b=repeated_logical_right_shift(5,1)
 print(b.int)
-'''
 
 def get_bit(num, index):
     left=num
@@ -37,3 +36,26 @@ def set_bit(num,index):
     return(left | right)
 
 print(set_bit(4,1))
+
+def clear_bit(num,index):
+    left=num
+    right=~(1 << index)
+    return(left & right)
+
+print(clear_bit(7,1))
+'''
+#clear bit from most significant to i index inclusively
+def left_clear_bit(num,index):
+    left=num
+    right=(1 << index)-1
+    return(left & right)
+
+print(left_clear_bit(7,1))
+
+#the other way
+def right_clear_bit(num,index):
+    left=num
+    right=(-1 << index+1)
+    return(left & right)
+
+print(right_clear_bit(7,1))
