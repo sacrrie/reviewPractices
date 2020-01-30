@@ -35,8 +35,6 @@ def closestElement(A,B):
                     added=True
                     break
                 b=b[:j]
-        if not added:
-            ans.append(b[0])
     return(ans)
 
 def closest(v1,v2,target):
